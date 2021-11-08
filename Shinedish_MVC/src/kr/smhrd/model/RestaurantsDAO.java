@@ -10,7 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 // JDBC -> MyBatis Framework(DB Framework) -> API
-public class MainDAO {	// DAO(Data Access Object)
+public class RestaurantsDAO {	// DAO(Data Access Object)
 	//		Session=connection, Factory=공장 :Connection을 미리 만들어서 여러개를 가지고 있는 객체
 	private static SqlSessionFactory sqlSessionFactory;
 	// 초기화 블럭 => DB연결 작업하기!
@@ -25,6 +25,13 @@ public class MainDAO {	// DAO(Data Access Object)
 		}
 	}
 	
-	
+	public List<RestaurantsVO> boardList() {
+		SqlSession session = sqlSessionFactory.openSession(); // Connection을 꺼내
+		List<RestaurantsVO> list = session.selectList("res_List");
+		System.out.println("Connection Success!!");
+		session.close();	// 반납
+		System.out.println("DisConnection Success!!");
+		return list;
+	}
 	
 }

@@ -4,30 +4,11 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.smhrd.mybatis.BoardMapper">
 
-	<insert id="boardInsert" parameterType = "kr.smhrd.model.BoardVO">
-	insert into board(title, contents, writer)
-	 values(#{title}, #{contents}, #{writer})
-	</insert>
+
 	
-	<select id="boardList" resultType="kr.smhrd.model.BoardVO">
-	select * from board order by idx desc
+	<select id="res_List" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants order by total_score desc
 	</select>
-	
-	<delete id="boardDelete" parameterType = "int">
-	delete from board where idx=#{idx}
-	</delete>
-	
-	<select id="boardContent" parameterType="int" resultType="kr.smhrd.model.BoardVO">
-	select * from board where idx=#{idx}
-	</select>
-	
-	<update id="boardUpdate" parameterType="kr.smhrd.model.BoardVO">
-	update board set title = #{title}, contents=#{contents} where idx=#{idx}
-	</update>
-	
-	<select id="isLogin" parameterType="kr.smhrd.model.UserVO" resultType="kr.smhrd.model.UserVO">
-	select * from user where id =#{id} and password = #{password}
-	</select>
-	
+
 	
 </mapper>

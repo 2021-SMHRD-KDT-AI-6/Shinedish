@@ -1,5 +1,20 @@
+<%@page import="kr.smhrd.model.RestaurantsVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%
+	// Object Casting (객체 형변환! - 제일 중요함!)
+	// request.getAttribute("list")는 타입이 Object이다!! ArrayList<BoardVO>로 형변환해주자!
+		ArrayList<RestaurantsVO> list = (ArrayList<RestaurantsVO>)request.getAttribute("list");
+		
+	// 위에 문장은 Object list = request.getAttribute("list");로 쓸 수 있다.
+		String cpath = request.getContextPath(); 	// cpath : /m02
+
+	// 세션값을 읽어오는 방법!
+	//UserVO user = (UserVO)session.getAttribute("succ");
+%>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +55,7 @@
                 <div class="frame">
                     <div id="m-booked-bl-simple-87016">
                         <div class="booked-wzs-160-110 weather-customize" style="background-color:#137AE9;width:200px;"
-                            id="width2" href="https://weather.naver.com/">
+                            id="width2" href="https://www.weather.go.kr/w/weather/forecast/short-term.do">
                             <div class="booked-wzs-160-110_in">
                                 <div class="booked-wzs-160-data">
                                     <div class="booked-wzs-160-left-img wrz-18"></div>
@@ -95,26 +110,35 @@
                 <br>
                 <span>친구들끼리 회식은 어떤가요? ㅇ ㅅㅇ)?</span>
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-header">
-                        My Card
-                        <p id="stsc">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </p>
-                    </div>
-                    <div>
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Lorem</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
-                            sem ut malesuada.</p>
-                        <a href="#" class="btn btn-primary">More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
+
+          <% for(int i=0; i<9; i++){ 
+        	   RestaurantsVO vo =(RestaurantsVO) list.get(i);  %>
+        	  <div class="col-6">
+              <div class="card">
+                  <div class="card-header">
+                   <h3>  <%=vo.getR_name()%>                     
+                      <p id="stsc">
+                          <small class="text-muted"><%=vo.getTotal_score()%>/5</small>
+                     
+                      </p></h3> 
+                  </div>
+                  <div>
+                      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                  </div>
+                  <div class="card-body">
+                      <h5 class="card-title">  </h5>
+                      <a class="card-text"><%=vo.getR_phone()%></a><br>                      
+                      <a class="card-text"><%=vo.getR_road_addr()%></a><br>                   
+                      <a class="card-text"><%=vo.getR_running_time()%></a><br><br>                      	
+                      <p align="center"><a href="#" class="btn btn-primary">More</a></p>
+  
+                  </div>
+              </div>
+          </div>
+        <%   } %>
+            
+        <!--   
+          <div class="col-6">
                 <div class="card">
                     <div class="card-header">
                         My Card
@@ -267,6 +291,7 @@
                     </div>
                 </div>
             </div>
+             -->
         </div>
         <div id="subbar">
             <span>

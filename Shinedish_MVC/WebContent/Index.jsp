@@ -1,25 +1,19 @@
-<%@page import="kr.smhrd.model.MembersVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+  <!-- 액션태그 jsp를 forward 시킬때 페이지로 가게 하라! -->
 <jsp:forward page = "main.do"/>
-
-<%
-//세션값을 읽어오는 방법!
-	MembersVO members = (MembersVO)session.getAttribute("succ");
-%>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShineDish</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="mainstyle.css">
-    <link rel="stylesheet" href="css/Cafe24SsurroundAir.css">
-    <link rel="stylesheet" href="css/HS새마을체.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mainstyle01.css">
+    <link rel="stylesheet" href="fonts/Cafe24SsurroundAir.ttf">
+    <link rel="stylesheet" href="fonts/HS새마을체.ttf">
 </head>
 
 <body>
@@ -27,7 +21,7 @@
         <div id="header">
 
             <div class="logo">
-                <a href="http://127.0.0.1:5500/main.html" id="header_logo"><img src="img/shinedish.png" alt="로고"></a>
+                <a href="http://localhost:13681/sd/Main.jsp" id="header_logo"><img src="img/shinedish.png" alt="로고"></a>
             </div>
 
             <div class="search_box">
@@ -36,7 +30,7 @@
             </div>
 
             <div class="menu">
-                <a href="http://127.0.0.1:5500/main.html" class="menu_list">메인</a>
+                <a href="http://localhost:13681/sd/Main.jsp#" class="menu_list">메인</a>
                 <a href="http://127.0.0.1:5500/taste.html#" class="menu_list">맛집추천</a>
                 <a href="#" class="menu_list">MY페이지</a>
                 <a href="#" class="menu_list">로그인</a>
@@ -285,4 +279,4 @@
     </div>
 </body>
 
-</html></html>
+</html>
