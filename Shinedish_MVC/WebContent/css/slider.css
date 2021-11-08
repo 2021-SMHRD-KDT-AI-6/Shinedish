@@ -1,0 +1,75 @@
+#slider {
+    width: 100%;
+    height: auto;
+    font-size: 30pt;
+    font-style: italic;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid
+}
+/* category 끝 */
+
+/* slider 시작 */
+.slider_list{
+    text-align: center;
+}
+.bx-wrapper {
+    position: relative;
+}
+.bx-controls-direction{
+    font-size: 20px;
+}
+
+.bx-controls-direction a {
+    position: absolute; 
+    top: 50%; 
+    display: block; 
+    width: 80px; 
+    height: 80px; 
+    overflow: hidden;
+    transform: translateY(-50%); 
+    font-weight: normal;
+}
+                    
+.bx-controls-direction .bx-prev {
+    left: 0;
+}
+                    
+.bx-controls-direction .bx-next {
+    right: 0;
+}
+                    
+.bx-controls-direction .bx-prev:before{
+    content: "\e93d"; 
+    font-family: 'xeicon';
+}
+                    
+.bx-controls-direction .bx-next:before{
+    content: "\e940"; 
+    font-family: 'xeicon';
+}
+                    
+.bx-pager{
+    position: absolute;
+    left: 0;
+    bottom: 92px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5px;
+}
+
+.bx-pager a {
+    display: block;
+    font-size: 0;
+    color: transparent;
+    width: 24px; height: 3px;
+    background-color: black;
+}
+                    
+.bx-pager div a.active{
+    background-color: whitesmoke;
+}
+/* slider 끝 */

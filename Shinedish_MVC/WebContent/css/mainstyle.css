@@ -1,0 +1,239 @@
+#shinedish {
+    width: 1200px;
+    height: 2700px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/* header 시작 */
+#header{
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid
+}
+/*
+.logo {
+    display: inline-block;
+    padding: 5px;
+}    
+*/
+#header{
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 2fr;
+}
+.search_box{
+    text-align: center;
+    background: rgb(204, 224, 213);
+    transform: translate(0, 30%);
+    height: 45px;
+    width: auto;
+    border-radius: 40px;
+    padding: 5px;
+}
+.menu{
+    text-align: right;
+    padding-top: 20px;
+}
+.menu_list{
+    font-size: 20px;
+    padding-right: 30px;
+}
+.search-btn{
+    color: white;
+    width: 35px;
+    height: 35px;
+    float: right;
+    border-radius: 50%;
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 150px;
+}
+
+.search_box:hover > .search-btn{
+    width: 38px;
+    padding: 0 6px;
+}
+/* header 끝 */
+
+/* category 시작 */
+#category {
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid
+}
+
+.category_list {
+    width: 100%;
+    height: 30px;
+}
+
+.category_list_01{
+    float: left;
+    width: 30%;
+    height: 160px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.lim{
+    display: block;
+}
+
+#mainpage {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+}
+/* category 끝 */
+
+/* rst 끝 */
+#rst{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.rst_box{
+    width: 70%;
+    height: 500px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    border: 2px solid
+}
+
+.rst_inf{
+    width: 700px;
+    height: 450px;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+    display: inline-block;
+}
+/* rst 끝 */
+
+/* map 시작 */
+#map{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.map_box {
+    width: 60%;
+    height: 400px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    border: 2px solid
+}
+
+.map_inf{
+    width: 550px;
+    height: 350px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.map_inf_img{
+    text-align: center;
+}
+
+iframe {
+    border: 1px solid black;
+    width: 100%;
+    height: 360px;
+}
+
+.output {
+    background: rgb(133, 130, 130);
+}
+/* map 끝 */
+
+/* review 시작 */
+#review{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid
+}
+
+.review_list{
+    width: 1000px;
+    height: 300px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.review_photo{
+    width: 35%;
+    height: 250px;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.review_write{
+    width: 60%;
+    height: 250px;
+    padding: 5px;
+    margin: 5px;
+    float: right;
+    box-sizing: border-box;
+    border: 2px solid
+}
+
+.review_star{
+    width: cewnter;
+    height: 50px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+/* review 끝 */
+
+#line{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* footer 시작 */
+#footer {
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    background-color: gray;
+    width: 100%;
+    height: 100px;
+    border: 1px solid
+}
+/* footer 끝 */
