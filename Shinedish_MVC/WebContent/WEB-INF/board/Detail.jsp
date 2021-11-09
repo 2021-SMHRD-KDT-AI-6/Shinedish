@@ -63,7 +63,7 @@
         <div id="header">
 
             <div class="logo">
-                <a href="#" id="header_logo"><img src="img01/shinedish_logo.png" alt="로고"></a>
+                <a href="#" id="header_logo" onclick ="location.href='<%=cpath%>/main.do'"><img src="img01/shinedish_logo.png" alt="로고"></a>
             </div>
 
             <div class="search_box">
@@ -72,7 +72,7 @@
             </div>
 
             <div class="menu">
-                <a href="#" class="menu_list">메인</a>
+                <a href="#" class="menu_list" onclick ="location.href='<%=cpath%>/main.do'">메인</a>
                 <a href="#" class="menu_list">맛집추천</a>
                 <a href="#" class="menu_list">MY페이지</a>
                 <a href="#" class="menu_list">로그인</a>
@@ -159,29 +159,29 @@
 
                 <div class="slider_list">
                     <li>
-                        <div class="lim"><img class="slider_list_img" src="img01/+<%=vo.getR_num()%>+_1.jpg" alt=""><img
-                                class="slider_list_img" src="img01/F0001_2.jpg" alt=""><img class="slider_list_img"
-                                src="img01/F0001_3.jpg" alt=""></div>
+                    	<div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_1.jpg alt="><img
+                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_2.jpg" alt=""><img class="slider_list_img"
+                                src="img01/<%=vo.getR_num()%>_3.jpg" alt=""></div>
                     </li>
                     <li>
-                        <div class="lim"><img class="slider_list_img" src="img01/F0001_4.jpg" alt=""><img
-                                class="slider_list_img" src="img01/F0001_5.jpg" alt=""><img class="slider_list_img"
-                                src="img01/F0001_1.jpg" alt=""></div>
+                        <div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_4.jpg" alt=""><img
+                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_5.jpg" alt=""><img class="slider_list_img"
+                                src="img01/<%=vo.getR_num()%>_1.jpg" alt=""></div>
                     </li>
                     <li>
-                        <div class="lim"><img class="slider_list_img" src="img01/F0001_2.jpg" alt=""><img
-                                class="slider_list_img" src="img01/F0001_3.jpg" alt=""><img class="slider_list_img"
-                                src="img01/F0001_4.jpg" alt=""></div>
+                        <div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_2.jpg" alt=""><img
+                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_3.jpg" alt=""><img class="slider_list_img"
+                                src="img01/<%=vo.getR_num()%>_4.jpg" alt=""></div>
                     </li>
                     <li>
-                        <div class="lim"><img class="slider_list_img" src="img01/F0001_5.jpg" alt=""><img
-                                class="slider_list_img" src="img01/F0001_1.jpg" alt=""><img class="slider_list_img"
-                                src="img01/F0001_2.jpg" alt=""></div>
+                        <div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_5.jpg" alt=""><img
+                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_1.jpg" alt=""><img class="slider_list_img"
+                                src="img01/<%=vo.getR_num()%>_2.jpg" alt=""></div>
                     </li>
                     <li>
-                        <div class="lim"><img class="slider_list_img" src="img01/F0001_3.jpg" alt=""><img
-                                class="slider_list_img" src="img01/F0001_4.jpg" alt=""><img class="slider_list_img"
-                                src="img01/F0001_5.jpg" alt=""></div>
+                        <div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_3.jpg" alt=""><img
+                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_4.jpg" alt=""><img class="slider_list_img"
+                                src="img01/<%=vo.getR_num()%>_5.jpg" alt=""></div>
                     </li>
                 </div>
 
@@ -230,7 +230,7 @@
 
             <div id="map">
 
-                <div class="map_inf_img"><iframe id="map_img_iframe" src="img01/res_map_T0001.html" name="site"
+                <div class="map_inf_img"><iframe id="map_img_iframe" src="res_map/res_map_<%=vo.getR_num()%>.html" name="site"
                         frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0
                         width="100%"></iframe></div>
 

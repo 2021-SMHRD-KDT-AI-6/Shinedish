@@ -41,7 +41,7 @@ Date d = new Date();
 		<div id="header">
 
 			<div class="logo">
-				<a href="http://localhost:13681/sd/Main.jsp" id="header_logo"><img
+				<a href="#" id="header_logo" onclick ="location.href='<%=cpath%>/main.do'"><img
 					src="img/shinedish.png" alt="로고"></a>
 			</div>
 
@@ -52,7 +52,7 @@ Date d = new Date();
 			</div>
 
 			<div class="menu">
-				<a href="http://localhost:13681/sd/Main.jsp#" class="menu_list">메인</a>
+				<a href="#" class="menu_list" onclick ="location.href='<%=cpath%>/main.do'">메인</a>
 				<a href="http://127.0.0.1:5500/taste.html#" class="menu_list">맛집추천</a>
 				<a href="#" class="menu_list">MY페이지</a> <a href="#"
 					class="menu_list">로그인</a>
