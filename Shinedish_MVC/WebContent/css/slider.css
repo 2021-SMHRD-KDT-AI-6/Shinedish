@@ -44,46 +44,44 @@
     font-size: 20px;
 }
 
-.bx-controls-direction a{
+.bx-controls-direction a {
     position: absolute; 
-    z-index:10;
-    top: 50%; 
-    transform: translateY(-60%); 
-    width: 38px; 
-    height: 38px; 
-    border-radius: 100%;
-    background:rgba(0,0,0,.5);
-    border: none;
+    top: 55%; 
+    display: block; 
+    width: 80px; 
+    height: 80px; 
+    overflow: hidden;
+    transform: translateY(-50%); 
+    font-weight: normal;
 }
-  
-
-.bx-controls-direction:before {
-
-    font-family: 'xeicon';
-    color: #fff;
-    font-size:25px; 
+                    
+.bx-controls-direction .bx-prev {
+    left: 0;
 }
-       
-.bx-controls-direction .bx-prev{
-    left:0;
-    font-size: 0; 
-    color: transparent;
-}
-
-.bx-controls-direction .bx-prev:before{
-    content :"e93d";
-}
-
+                    
 .bx-controls-direction .bx-next {
     right: 0;
-    font-size:0; 
-    color:transparent;
+}
+                    
+.bx-controls-direction .bx-prev:before{
+    content: "\e93d"; 
+    font-family: 'xeicon';
 }
                     
 .bx-controls-direction .bx-next:before{
     content: "\e940"; 
+    font-family: 'xeicon';
 }
                     
+.bx-pager{
+    position: absolute;
+    left: 0;
+    bottom: 92px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5px;
+}
 
 .bx-pager a {
     display: block;
@@ -93,11 +91,7 @@
     background-color: black;
 }
                     
-
+.bx-pager div a.active{
+    background-color: whitesmoke;
+}
 /* slider 끝 */
-
-
-
-
-
-

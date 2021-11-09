@@ -139,22 +139,33 @@ Date d = new Date();
 								"text/javascript");
 						weatherBookedScript.src = widgetSrc;
 						document.body.appendChild(weatherBookedScript)
+						
+
 					</script>
+
 				</div>
 
 			</div>
 		</div>
 		<div id="mainpage">
+<!--  			<script type="text/javascript">
+				var d = new Date();
+				var week = new Array('일', '월', '화', '수', '목', '금', '토');
+				document.write('오늘 요일: ' + week[d.getDay()] + '요일' + '<br />');
+			</script>
+-->
 			<div id="recommend_food">
-				<span>오늘은 <%=d%>입니다.</span> <br> <span>친구들끼리 회식은 어떤가요? ㅇ
-					ㅅㅇ)?</span>
+				<span>오늘은 <%=d%>입니다.
+				</span> <br> <span>친구들끼리 회식은 어떤가요? ㅇ ㅅㅇ)?</span>
 			</div>
+
+
 
 			<%
 				for (int i = 0; i < 9; i++) {
 				RestaurantsVO vo = (RestaurantsVO) list.get(i);
 			%>
-			<div class="col-6" style="height:465px">
+			<div class="col-6" style="height: 465px">
 				<div class="card">
 					<div class="card-header">
 						<h3>
@@ -173,10 +184,10 @@ Date d = new Date();
 						<h5 class="card-title"></h5>
 						<a class="card-text"><%=vo.getR_phone()%></a><br> <a
 							class="card-text"><%=vo.getR_road_addr()%></a><br> <a
-							class="card-text"><%=vo.getR_running_time()%></a><br>
-						<br>
+							class="card-text"><%=vo.getR_running_time()%></a><br> <br>
 						<p align="center">
-							<a href="<%=cpath%>/detail.do?idx=<%=vo.getR_num()%>" class="btn btn-primary">More</a>
+							<a href="<%=cpath%>/detail.do?r_num=<%=vo.getR_num()%>"
+								class="btn btn-primary">More</a>
 						</p>
 						<br>
 					</div>

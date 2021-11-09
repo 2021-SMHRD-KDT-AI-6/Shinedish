@@ -10,7 +10,9 @@
 	select * from restaurants order by total_score desc
 	</select>
 	
-	
+	<select id="detail" parameterType = "kr.smhrd.model.RestaurantsVO" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where r_num = #{r_num}
+	</select>
 
 	
 </mapper>
