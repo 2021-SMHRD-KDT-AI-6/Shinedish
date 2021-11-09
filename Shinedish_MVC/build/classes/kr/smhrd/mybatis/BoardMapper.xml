@@ -9,6 +9,8 @@
 	<select id="res_List" resultType="kr.smhrd.model.RestaurantsVO">
 	select * from restaurants order by total_score desc
 	</select>
+	
+	
 
 	
 </mapper>

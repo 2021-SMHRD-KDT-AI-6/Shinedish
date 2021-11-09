@@ -11,14 +11,8 @@
     height: 80px;
     padding: 5px;
     margin: 5px;
-    border: 2px solid
 }
-/*
-.logo {
-    display: inline-block;
-    padding: 5px;
-}    
-*/
+
 #header{
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 2fr;
@@ -59,7 +53,7 @@
     font-size: 18px;
     transition: 0.4s;
     line-height: 30px;
-    width: 150px;
+    width: 170px;
 }
 
 .search_box:hover > .search-btn{
@@ -71,40 +65,34 @@
 /* category 시작 */
 #category {
     width: 100%;
-    height: 200px;
+    height: 220px;
     overflow: auto;
-    background-size: 100%;
-    background-repeat: no-repeat;
     padding: 5px;
     margin: 5px;
-    border: 2px solid
+    /* border: 2px solid; */
+    /* background: rgb(235, 209, 229); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #D9D3C1;
 }
 
 .category_list {
     width: 100%;
     height: 30px;
+    font-size: 20px;
+    background-image: url("img/shinedish_logo.png");
 }
 
 .category_list_01{
     float: left;
-    width: 30%;
-    height: 160px;
+    width: 31%;
+    height: 190px;
     padding: 5px;
     margin: 5px;
 }
-
-.lim{
-    display: block;
-}
-
-#mainpage {
-    width: 100%;
-    padding: 10px;
-    height: auto;
-}
 /* category 끝 */
 
-/* rst 끝 */
+/* rst 시작 */
 #rst{
     width: 100%;
     height: auto;
@@ -114,19 +102,20 @@
 }
 
 .rst_box{
-    width: 70%;
-    height: 500px;
+    width: 90%;
+    height: 600px;
     padding: 5px;
     margin: 5px;
     display: inline-block;
-    border: 2px solid
+    border: 1px solid
 }
 
 .rst_inf{
-    width: 700px;
-    height: 450px;
+    width: 950px;
+    height: 550px;
     padding: 5px;
     margin: 5px;
+    font-size: 20px;
     text-align: left;
     display: inline-block;
 }
@@ -147,7 +136,7 @@
     padding: 5px;
     margin: 5px;
     display: inline-block;
-    border: 2px solid
+    border: 1px solid
 }
 
 .map_inf{
@@ -159,11 +148,11 @@
 }
 
 .map_inf_img{
+    border: solid 1px black;
     text-align: center;
 }
 
 iframe {
-    border: 1px solid black;
     width: 100%;
     height: 360px;
 }
@@ -190,12 +179,28 @@ iframe {
 }
 
 .review_photo{
-    width: 35%;
-    height: 250px;
+    width: 350px;
+    height: 300px;
     padding: 5px;
     margin: 5px;
     float: left;
-    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+.review_photo_img{
+    /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin : auto;
+  display: block; 
+  width: 100% height 100% object-fit cover margin auto displa block*/
+  max-width: 100%;
+  width: auto !important;
+  height: auto;
 }
 
 .review_write{
@@ -205,7 +210,7 @@ iframe {
     margin: 5px;
     float: right;
     box-sizing: border-box;
-    border: 2px solid
+    border: 1px solid
 }
 
 .review_star{
@@ -222,8 +227,18 @@ iframe {
     width: 100%;
     padding: 5px;
     margin: 5px;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
+}
+
+.line_list{
+    padding: 5px;
+    margin: 5px;
+}
+
+#header_line{
+    padding: 1px;
+    margin: 1px;
 }
 
 /* footer 시작 */

@@ -1,12 +1,29 @@
+<%@page import="kr.smhrd.model.RestaurantsVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+
+<%
+	// Object Casting (객체 형변환! - 제일 중요함!)
+	// request.getAttribute("list")는 타입이 Object이다!! ArrayList<BoardVO>로 형변환해주자!
+		ArrayList<RestaurantsVO> list = (ArrayList<RestaurantsVO>)request.getAttribute("list");
+		
+	// 위에 문장은 Object list = request.getAttribute("list");로 쓸 수 있다.
+		String cpath = request.getContextPath(); 	// cpath : /m02
+
+	// 세션값을 읽어오는 방법!
+	//UserVO user = (UserVO)session.getAttribute("succ");
+%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ShineDish</title>
 
     <!-- font -->
     <meta charset="utf-8">

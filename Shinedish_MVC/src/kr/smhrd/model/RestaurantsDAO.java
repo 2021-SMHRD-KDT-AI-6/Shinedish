@@ -34,4 +34,12 @@ public class RestaurantsDAO {	// DAO(Data Access Object)
 		return list;
 	}
 	
+	public List<RestaurantsVO> detailList() {
+		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
+		List<RestaurantsVO> list = session.selectList("detail_List");
+		System.out.println("Connection Success!!");
+		session.close();	// π›≥≥
+		System.out.println("DisConnection Success!!");
+		return list;
+	}
 }
