@@ -10,6 +10,18 @@
 	select * from restaurants order by total_score desc
 	</select>
 	
+	<select id="res_List_gu" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where r_addr_gu=#{r_addr_gu} order by total_score desc
+	</select>
+	
+	<select id="res_List_dong" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where r_addr_dong=#{r_addr_dong} 
+	</select>
+	
+	<select id="res_List_mood" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where mood_num=#{mood_num} 
+	</select>
+	
 	<select id="detail" parameterType = "kr.smhrd.model.RestaurantsVO" resultType="kr.smhrd.model.RestaurantsVO">
 	select * from restaurants where r_num = #{r_num}
 	</select>

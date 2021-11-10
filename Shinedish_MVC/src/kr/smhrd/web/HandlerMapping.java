@@ -20,8 +20,8 @@ public class HandlerMapping {
 		// mappings.put("/login.do", new LoginController());
 		 
 		mappings.put("/main.do", new RestaurantsController());
-	//	mappings.put("/restaurants.do", new RestaurantsController());
 		mappings.put("/detail.do", new DetailController());
+		mappings.put("/choice.do", new ChoiceController());
 	}
 	
 	

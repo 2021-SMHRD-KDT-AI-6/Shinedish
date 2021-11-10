@@ -41,7 +41,8 @@ Date d = new Date();
 		<div id="header">
 
 			<div class="logo">
-				<a href="#" id="header_logo" onclick ="location.href='<%=cpath%>/main.do'"><img
+				<a href="#" id="header_logo"
+					onclick="location.href='<%=cpath%>/main.do'"><img
 					src="img/shinedish.png" alt="로고"></a>
 			</div>
 
@@ -52,8 +53,9 @@ Date d = new Date();
 			</div>
 
 			<div class="menu">
-				<a href="#" class="menu_list" onclick ="location.href='<%=cpath%>/main.do'">메인</a>
-				<a href="http://127.0.0.1:5500/taste.html#" class="menu_list">맛집추천</a>
+				<a href="#" class="menu_list"
+					onclick="location.href='<%=cpath%>/main.do'">메인</a> <a
+					href="#" class="menu_list" onclick="location.href='<%=cpath%>/choice.do'">맛집추천</a>
 				<a href="#" class="menu_list">MY페이지</a> <a href="#"
 					class="menu_list">로그인</a>
 			</div>
@@ -148,7 +150,7 @@ Date d = new Date();
 			</div>
 		</div>
 		<div id="mainpage">
-<!--  			<script type="text/javascript">
+			<!--  			<script type="text/javascript">
 				var d = new Date();
 				var week = new Array('일', '월', '화', '수', '목', '금', '토');
 				document.write('오늘 요일: ' + week[d.getDay()] + '요일' + '<br />');
@@ -165,8 +167,10 @@ Date d = new Date();
 				for (int i = 0; i < 9; i++) {
 				RestaurantsVO vo = (RestaurantsVO) list.get(i);
 			%>
-			<div class="col-6" style="height: 465px">
+			<div class="col-6" style="height: 570px">
+
 				<div class="card">
+
 					<div class="card-header">
 						<h3>
 							<%=vo.getR_name()%>
@@ -176,10 +180,13 @@ Date d = new Date();
 							</p>
 						</h3>
 					</div>
+
 					<div>
 						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
+							src="res_img/<%=vo.getR_num()%>_1.jpg" alt=""></a>
+
 					</div>
+
 					<div class="card-body">
 						<h5 class="card-title"></h5>
 						<a class="card-text"><%=vo.getR_phone()%></a><br> <a
@@ -191,7 +198,9 @@ Date d = new Date();
 						</p>
 						<br>
 					</div>
+
 				</div>
+
 			</div>
 			<%
 				}

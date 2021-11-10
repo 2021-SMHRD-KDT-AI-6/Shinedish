@@ -34,6 +34,32 @@ public class RestaurantsDAO {	// DAO(Data Access Object)
 		return list;
 	}
 	
+	public List<RestaurantsVO> boardList_gu(String r_addr_gu) {
+		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
+		List<RestaurantsVO> list = session.selectList("res_List_gu", r_addr_gu);
+		System.out.println("Connection Gu Success!!");
+		session.close();	// π›≥≥
+		System.out.println("DisConnection Gu Success!!");
+		return list;
+	}
+	
+	public List<RestaurantsVO> boardList_dong(String r_addr_dong) {
+		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
+		List<RestaurantsVO> list = session.selectList("res_List_dong", r_addr_dong);
+		System.out.println("Connection Dong Success!!");
+		session.close();	// π›≥≥
+		System.out.println("DisConnection Dong Success!!");
+		return list;
+	}
+	
+	public List<RestaurantsVO> boardList_mood(String mood_num) {
+		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
+		List<RestaurantsVO> list = session.selectList("res_List_mood", mood_num);
+		System.out.println("Connection Mood Success!!");
+		session.close();	// π›≥≥
+		System.out.println("DisConnection Mood Success!!");
+		return list;
+	}
 	public RestaurantsVO detailList(String r_num) {
 		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
 		RestaurantsVO list = session.selectOne("detail", r_num);

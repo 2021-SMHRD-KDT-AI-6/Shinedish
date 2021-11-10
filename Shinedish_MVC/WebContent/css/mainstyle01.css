@@ -23,7 +23,7 @@
     background-color: whitesmoke;
     display: inline-block;
     width: 100%;
-    height: 1750px;
+    height: 1900px;
 }
 
 #subbar {
@@ -66,10 +66,11 @@
 .col-6 {
     display: inline-block;
     width: 32%;
-    height: 465px;
+    height: 500px;
     top: 15px;
     left: 15px;
     right: 15px;
+    bottom: 15px;
     padding : 20px;
 }
 .card-body{

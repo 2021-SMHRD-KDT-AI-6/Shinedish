@@ -159,29 +159,29 @@
 
                 <div class="slider_list">
                     <li>
-                    	<div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_1.jpg alt="><img
-                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_2.jpg" alt=""><img class="slider_list_img"
-                                src="img01/<%=vo.getR_num()%>_3.jpg" alt=""></div>
+                    	<div class="lim"><img class="slider_list_img" src="res_img/<%=vo.getR_num()%>_1.jpg" alt=""><img
+                                class="slider_list_img" src="res_img/<%=vo.getR_num()%>_2.jpg" alt=""><img class="slider_list_img"
+                                src="res_img/<%=vo.getR_num()%>_3.jpg" alt=""></div>
                     </li>
                     <li>
-                        <div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_4.jpg" alt=""><img
-                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_5.jpg" alt=""><img class="slider_list_img"
-                                src="img01/<%=vo.getR_num()%>_1.jpg" alt=""></div>
+                        <div class="lim"><img class="slider_list_img" src="res_img/<%=vo.getR_num()%>_4.jpg" alt=""><img
+                                class="slider_list_img" src="res_img/<%=vo.getR_num()%>_5.jpg" alt=""><img class="slider_list_img"
+                                src="res_img/<%=vo.getR_num()%>_1.jpg" alt=""></div>
                     </li>
                     <li>
-                        <div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_2.jpg" alt=""><img
-                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_3.jpg" alt=""><img class="slider_list_img"
-                                src="img01/<%=vo.getR_num()%>_4.jpg" alt=""></div>
+                        <div class="lim"><img class="slider_list_img" src="res_img/<%=vo.getR_num()%>_2.jpg" alt=""><img
+                                class="slider_list_img" src="res_img/<%=vo.getR_num()%>_3.jpg" alt=""><img class="slider_list_img"
+                                src="res_img/<%=vo.getR_num()%>_4.jpg" alt=""></div>
                     </li>
                     <li>
-                        <div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_5.jpg" alt=""><img
-                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_1.jpg" alt=""><img class="slider_list_img"
-                                src="img01/<%=vo.getR_num()%>_2.jpg" alt=""></div>
+                        <div class="lim"><img class="slider_list_img" src="res_img/<%=vo.getR_num()%>_5.jpg" alt=""><img
+                                class="slider_list_img" src="res_img/<%=vo.getR_num()%>_1.jpg" alt=""><img class="slider_list_img"
+                                src="res_img/<%=vo.getR_num()%>_2.jpg" alt=""></div>
                     </li>
                     <li>
-                        <div class="lim"><img class="slider_list_img" src="img01/<%=vo.getR_num()%>_3.jpg" alt=""><img
-                                class="slider_list_img" src="img01/<%=vo.getR_num()%>_4.jpg" alt=""><img class="slider_list_img"
-                                src="img01/<%=vo.getR_num()%>_5.jpg" alt=""></div>
+                        <div class="lim"><img class="slider_list_img" src="res_img/<%=vo.getR_num()%>_3.jpg" alt=""><img
+                                class="slider_list_img" src="res_img/<%=vo.getR_num()%>_4.jpg" alt=""><img class="slider_list_img"
+                                src="res_img/<%=vo.getR_num()%>_5.jpg" alt=""></div>
                     </li>
                 </div>
 
