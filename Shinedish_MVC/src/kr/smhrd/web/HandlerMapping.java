@@ -21,6 +21,7 @@ public class HandlerMapping {
 		 
 		mappings.put("/main.do", new RestaurantsController());
 		mappings.put("/detail.do", new DetailController());
+		mappings.put("/recommend.do", new RecommendController());
 		mappings.put("/choice.do", new ChoiceController());
 	}
 	

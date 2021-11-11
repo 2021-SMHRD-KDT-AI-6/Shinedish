@@ -14,7 +14,7 @@ public class RestaurantsVO {	// user table -> 3명 저장
 
 	private String r_num;	// 맛집 번호
 	private String r_foodtype;	// 분류 번호
-	private int mood_num;	// 무드 순번
+	private String mood_num;	// 무드 순번
 	private String r_name;	// 맛집 상호
 	private String r_addr_gu;	// 맛집 주소 구
 	private String r_addr_dong; // 맛집 주소 동

@@ -88,10 +88,10 @@
     font-size: 0;
     color: transparent;
     width: 24px; height: 3px;
-    background-color: black;
+    background-color: white;
 }
                     
 .bx-pager div a.active{
-    background-color: whitesmoke;
+    background-color: white;
 }
 /* slider 끝 */

@@ -14,8 +14,8 @@
 	select * from restaurants where r_addr_gu=#{r_addr_gu} order by total_score desc
 	</select>
 	
-	<select id="res_List_dong" resultType="kr.smhrd.model.RestaurantsVO">
-	select * from restaurants where r_addr_dong=#{r_addr_dong} 
+	<select id="res_List_foodtype" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where r_foodtype=#{r_foodtype} 
 	</select>
 	
 	<select id="res_List_mood" resultType="kr.smhrd.model.RestaurantsVO">
@@ -25,6 +25,29 @@
 	<select id="detail" parameterType = "kr.smhrd.model.RestaurantsVO" resultType="kr.smhrd.model.RestaurantsVO">
 	select * from restaurants where r_num = #{r_num}
 	</select>
+	
+	<select id="res_List_choice" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants 
+	where r_addr_gu=#{r_addr_gu} and  r_foodtype=#{r_foodtype} and mood_num=#{mood_num}
+	order by total_score desc
+	</select>
 
+	<select id="res_List_exc_gu" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants 
+	where r_foodtype=#{r_foodtype} and mood_num=#{mood_num}
+	order by total_score desc
+	</select>		
+	
+	<select id="res_List_exc_mood" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants 
+	where r_addr_gu=#{r_addr_gu} and  r_foodtype=#{r_foodtype}
+	order by total_score desc
+	</select>		
+
+	<select id="res_List_exc_foodtype" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants 
+	where r_addr_gu=#{r_addr_gu} and  r_foodtype=#{r_foodtype} and mood_num=#{mood_num}
+	order by total_score desc
+	</select>	
 	
 </mapper>

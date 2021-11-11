@@ -1,7 +1,10 @@
 package kr.smhrd.model;
 
 import java.io.IOException;
+
 import java.io.InputStream;
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -34,32 +37,69 @@ public class RestaurantsDAO {	// DAO(Data Access Object)
 		return list;
 	}
 	
-	public List<RestaurantsVO> boardList_gu(String r_addr_gu) {
+	public List<RestaurantsVO> boardList_gu() {
 		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
-		List<RestaurantsVO> list = session.selectList("res_List_gu", r_addr_gu);
+		List<RestaurantsVO> list = session.selectList("res_List_gu");
 		System.out.println("Connection Gu Success!!");
 		session.close();	// π›≥≥
 		System.out.println("DisConnection Gu Success!!");
 		return list;
 	}
 	
-	public List<RestaurantsVO> boardList_dong(String r_addr_dong) {
+	public List<RestaurantsVO> boardList_foodtype() {
 		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
-		List<RestaurantsVO> list = session.selectList("res_List_dong", r_addr_dong);
-		System.out.println("Connection Dong Success!!");
+		List<RestaurantsVO> list = session.selectList("res_List_foodtype");
+		System.out.println("Connection foodtype Success!!");
 		session.close();	// π›≥≥
-		System.out.println("DisConnection Dong Success!!");
+		System.out.println("DisConnection foodtype Success!!");
 		return list;
 	}
 	
-	public List<RestaurantsVO> boardList_mood(String mood_num) {
+	public List<RestaurantsVO> boardList_mood() {
 		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
-		List<RestaurantsVO> list = session.selectList("res_List_mood", mood_num);
+		List<RestaurantsVO> list = session.selectList("res_List_mood");
 		System.out.println("Connection Mood Success!!");
 		session.close();	// π›≥≥
 		System.out.println("DisConnection Mood Success!!");
 		return list;
 	}
+	
+	public List<RestaurantsVO> boardList_choice(RestaurantsVO vo) {
+		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
+		List<RestaurantsVO> list = session.selectList("res_List_choice", vo);
+		System.out.println("Connection choice Success!!");
+		session.close();	// π›≥≥
+		System.out.println("DisConnection choice Success!!");
+		return list;
+	}
+	
+	public List<RestaurantsVO> boardList_exc_gu() {
+		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
+		List<RestaurantsVO> list = session.selectList("res_List_exc_gu");
+		System.out.println("Connection res_List_exc_gu Success!!");
+		session.close();	// π›≥≥
+		System.out.println("DisConnection res_List_exc_gu Success!!");
+		return list;
+	}
+	
+	public List<RestaurantsVO> boardList_exc_mood() {
+		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
+		List<RestaurantsVO> list = session.selectList("res_List_exc_mood");
+		System.out.println("Connection res_List_exc_mood Success!!");
+		session.close();	// π›≥≥
+		System.out.println("DisConnection res_List_exc_mood Success!!");
+		return list;
+	}
+	
+	public List<RestaurantsVO> boardList_exc_foodtype() {
+		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
+		List<RestaurantsVO> list = session.selectList("res_List_exc_foodtype");
+		System.out.println("Connection res_List_exc_foodtype Success!!");
+		session.close();	// π›≥≥
+		System.out.println("DisConnection res_List_exc_foodtype Success!!");
+		return list;
+	}
+	
 	public RestaurantsVO detailList(String r_num) {
 		SqlSession session = sqlSessionFactory.openSession(); // Connection¿ª ≤®≥ª
 		RestaurantsVO list = session.selectOne("detail", r_num);

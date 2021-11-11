@@ -10,10 +10,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShineDish</title>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/mainstyle01.css">
-    <link rel="stylesheet" href="fonts/Cafe24SsurroundAir.ttf">
-    <link rel="stylesheet" href="fonts/HS새마을체.ttf">
+    <link rel="stylesheet" href="css/main_mainstyle.css">
+    
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="fonts/font.css">
+
+    <!-- search -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 </head>
 
 <body>

@@ -21,42 +21,38 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RstDetail_page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RstDetail_page</title>
 
-<!-- font -->
-<meta charset="utf-8">
-<link rel="stylesheet" href="RstDetail_fonts/rstdetail_font.css">
+    <!-- font -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="fonts/font.css">
 
-<link rel="stylesheet" href="css01/bootstrap.min.css">
-<link rel="stylesheet" href="css01/rstdetail_mainstyle.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/rstdetail_mainstyle.css">
 
-<!-- search -->
-<script defer
-	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- search -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-<!-- category -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- category -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
-<!-- slider -->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-<script>
+    <!-- slider -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
         $(document).ready(function () {
             $('.slider_list').bxSlider();
         });
     </script>
-<link rel="stylesheet"
-	href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-<link rel="stylesheet" href="css01/slider.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/slider.css">
 
-<!-- button -->
-<link rel="stylesheet" href="css01/rstdetail_buttonstyle.css">
+    <!-- button -->
+    <link rel="stylesheet" href="css/rstdetail_buttonstyle.css">
 
 </head>
 
@@ -69,21 +65,20 @@
 			<div class="logo">
 				<a href="#" id="header_logo"
 					onclick="location.href='<%=cpath%>/main.do'"><img
-					src="img01/shinedish_logo.png" alt="로고"></a>
+					src="img/shinedish_logo.png" alt="로고"></a>
 			</div>
 
-			<div class="search_box">
-				<input class="search-txt" type="text" name=""
-					placeholder="Type to search"> <a class="search-btn" href=""><i
-					class="fas fa-search"></i></a>
-			</div>
+            <div class="search_box">
+                <input class="search-txt" type="text" name="" placeholder="Type to search">
+                <a class="search-btn" href=""><i class="fas fa-search"></i></a>
+            </div>
 
 			<div class="menu">
 				<a href="#" class="menu_list"
 					onclick="location.href='<%=cpath%>/main.do'">메인</a> <a href="#"
 					class="menu_list" onclick="location.href='<%=cpath%>/choice.do'">맛집추천</a>
-				<a href="#" class="menu_list">MY페이지</a> <a href="#"
-					class="menu_list">로그인</a>
+				<a href="#" class="menu_list">MY페이지</a> 
+				<a href="#" class="menu_list">로그인</a>
 			</div>
 
 		</div>
@@ -92,71 +87,6 @@
 			<hr id="header_line" class="line_list">
 		</div>
 
-		<!-- Page Category -->
-		<div id="category">
-
-			<div class="category_list">
-
-				<div class="category1">
-					<li class="category_list_01" id="locationList"><span>Click
-							01 - 지역</span>
-						<ul class="sub" style="display: none">
-							<li><a class="location" href="#">동구</a></li>
-							<li><a class="location" href="#">서구</a></li>
-							<li><a class="location" href="#">남구</a></li>
-							<li><a class="location" href="#">북구</a></li>
-							<li><a class="location" href="#">광산구</a></li>
-						</ul></li>
-				</div>
-				<!--  
-                <div class="category1">
-                    <li class="category_list_01">
-                        Click 02 - 음식 종류
-                        <ul class="sub" style="display:none">
-                            <li><a href="#">한식</a></li>
-                            <li><a href="#">양식</a></li>
-                            <li><a href="#">중식</a></li>
-                            <li><a href="#">일식</a></li>
-                            <li><a href="#">아시아</a></li>
-                        </ul>
-                    </li>
-                </div>
--->
-
-				<div class="category1">
-					<li class="category_list_01" id="moodList"><span>Click
-							02 - 분위기</span>
-						<ul class="sub" style="display: none">
-							<li><a class="mood" href="#">Good Mood</a></li>
-							<li><a class="mood" href="#">Good Price</a></li>
-							<li><a class="mood" href="#">Good View</a></li>
-							<li><a class="mood" href="#">Exotic Mood</a></li>
-						</ul></li>
-				</div>
-
-				<div class="category1">
-					<button id="choice">Choice</button>
-				</div>
-
-
-				<script>
-                    $(".category1").click(function () {
-                        if ($(this).find(".sub").is(":visible")) {
-                            $(this).find(".sub").css("display", "none");
-                        }
-                        else {
-                            $(this).find(".sub").css("display", "block");
-                        }
-                    })
-                </script>
-
-			</div>
-
-		</div>
-
-		<div id="line">
-			<hr class="line_list">
-		</div>
 
 		<div id="line">
 			<div id="line_list" class="line_img">맛집 사진</div>
@@ -170,9 +100,7 @@
 
 				<div class="slider_list">
 					<li>
-						<div class="lim">
-							<img class="slider_list_img"
-								src="res_img/<%=vo.getR_num()%>_1.jpg" alt=""><img
+						<div class="lim"><img class="slider_list_img" src="res_img/<%=vo.getR_num()%>_1.jpg" alt=""><img
 								class="slider_list_img" src="res_img/<%=vo.getR_num()%>_2.jpg"
 								alt=""><img class="slider_list_img"
 								src="res_img/<%=vo.getR_num()%>_3.jpg" alt="">
@@ -271,7 +199,7 @@
 			<!-- Page map_button -->
 			<div id="map_button">
 				<li style="display: inline-block;"><span><a
-						href="img01/res_map_T0001.html" target="_blank"><button
+						href="img/res_map_T0001.html" target="_blank"><button
 								class="map_button_name" id="map_view" type="button">지도
 								크게보기</button></a></span></li>
 			</div>
@@ -290,7 +218,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -309,7 +237,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -328,7 +256,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -347,7 +275,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -366,7 +294,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -385,7 +313,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -404,7 +332,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -423,7 +351,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -442,7 +370,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -461,7 +389,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -480,7 +408,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -499,7 +427,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -518,7 +446,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -537,7 +465,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -556,7 +484,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -575,7 +503,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -594,7 +522,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>
@@ -613,7 +541,7 @@
 				<div class="review_box">
 					<div class="review_list">
 						<div class="review_photo">
-							<img class="review_photo_img" src="img01/food_01.png">
+							<img class="review_photo_img" src="img/food_01.png">
 						</div>
 						<div class="review_write">
 							<span>

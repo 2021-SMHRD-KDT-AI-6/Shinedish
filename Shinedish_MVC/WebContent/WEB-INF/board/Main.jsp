@@ -26,33 +26,38 @@ Date d = new Date();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShineDish</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/mainstyle01.css">
-<link rel="stylesheet" href="fonts/Cafe24SsurroundAir.ttf">
-<link rel="stylesheet" href="fonts/HS새마을체.ttf">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShineDish</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main_mainstyle.css">
+    
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="fonts/font.css">
+
+    <!-- search -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 </head>
 
 <body>
 	<div id="home">
-		<div id="header">
 
-			<div class="logo">
-				<a href="#" id="header_logo"
-					onclick="location.href='<%=cpath%>/main.do'"><img
-					src="img/shinedish.png" alt="로고"></a>
-			</div>
+        <div id="header">
 
-			<div class="search_box">
-				<input class="search-txt" type="text" name=""
-					placeholder="Type to search"> <a class="search-btn" href=""><i
-					class="fas fa-search"></i></a>
-			</div>
+            <div class="logo">
+                <a href="#"  id="header_logo"
+					onclick="location.href='<%=cpath%>/main.do'"><img src="img/shinedish.png" alt="로고"></a>
+            </div>
 
-			<div class="menu">
+            <div class="search_box">
+                <input class="search-txt" type="text" name="" placeholder="Type to search">
+                <a class="search-btn" href=""><i class="fas fa-search"></i></a>
+            </div>
+
+            <div class="menu">
 				<a href="#" class="menu_list"
 					onclick="location.href='<%=cpath%>/main.do'">메인</a> <a
 					href="#" class="menu_list" onclick="location.href='<%=cpath%>/choice.do'">맛집추천</a>
@@ -158,7 +163,7 @@ Date d = new Date();
 -->
 			<div id="recommend_food">
 				<span>오늘은 <%=d%>입니다.
-				</span> <br> <span>친구들끼리 회식은 어떤가요? ㅇ ㅅㅇ)?</span>
+				</span> <br> <span>오늘 저녁 이런 음식은 어떤가요?</span>
 			</div>
 
 
@@ -167,7 +172,7 @@ Date d = new Date();
 				for (int i = 0; i < 9; i++) {
 				RestaurantsVO vo = (RestaurantsVO) list.get(i);
 			%>
-			<div class="col-6" style="height: 570px">
+			<div class="col-6" style="height: 570px; margin-bottom:50px;">
 
 				<div class="card">
 
@@ -187,14 +192,14 @@ Date d = new Date();
 
 					</div>
 
-					<div class="card-body">
+					<div class="card-body" style="height: 230px">
 						<h5 class="card-title"></h5>
 						<a class="card-text"><%=vo.getR_phone()%></a><br> <a
 							class="card-text"><%=vo.getR_road_addr()%></a><br> <a
 							class="card-text"><%=vo.getR_running_time()%></a><br> <br>
 						<p align="center">
 							<a href="<%=cpath%>/detail.do?r_num=<%=vo.getR_num()%>"
-								class="btn btn-primary">More</a>
+								class="btn btn-primary" style="position: absolute; left:135px; bottom: 35px;">More</a>
 						</p>
 						<br>
 					</div>
