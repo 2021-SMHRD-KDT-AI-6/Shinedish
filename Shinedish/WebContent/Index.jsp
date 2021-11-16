@@ -5,7 +5,7 @@
 <%@page import="kr.smhrd.model.ReviewsVO"%>
 <%@page import="kr.smhrd.model.MembersVO"%>
 <%@page import="java.util.ArrayList"%>
-  <!-- 액션태그 jsp를 forward 시킬때 페이지로 가게 하라! -->
+  <!-- 액션태그 jsp를 forward 시킬때 페이지로 가게 하세요! -->
 <jsp:forward page = "main.do"/>
 <%
 	// Object Casting (객체 형변환! - 제일 중요함!)
