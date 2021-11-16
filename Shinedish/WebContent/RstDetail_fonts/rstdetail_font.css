@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Cafe24S';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tway_sky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#header{
+    font-family: 'Tway_sky';
+}
+
+#line{
+    font-family: 'Tway_sky';
+}
+
+.category_list_01{
+    font-family: 'Tway_sky';
+}
+
+.sub{
+    font-family: 'Cafe24S';
+}
+
+.rst_button_name{
+    font-family: 'Cafe24S';
+}
+
+.map_button_name{
+    font-family: 'Cafe24S';
+}
+
+.review_button_name{
+    font-family: 'Cafe24S';
+}
+.rst_inf_list{
+	font-family: 'Tway_sky';
+}
+
+body{
+    font-family: 'Cafe24S';
+}
+
+h1 {
+    font-family: "Cafe24S";
+}

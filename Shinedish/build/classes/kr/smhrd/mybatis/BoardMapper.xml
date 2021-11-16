@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.smhrd.mybatis.BoardMapper">
+
+
+	
+	<select id="res_List" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants order by total_score desc
+	</select>
+	
+	<select id="res_List_gu" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where r_addr_gu=#{r_addr_gu} order by total_score desc
+	</select>
+	
+	<select id="res_List_foodtype" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where r_foodtype=#{r_foodtype} 
+	</select>
+	
+	<select id="res_List_mood" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where mood_num=#{mood_num} 
+	</select>
+	
+	<select id="detail" parameterType = "kr.smhrd.model.RestaurantsVO" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where r_num = #{r_num}
+	</select>
+	
+	<select id="res_List_choice" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants 
+	where r_addr_gu=#{r_addr_gu} and  r_foodtype=#{r_foodtype} and mood_num=#{mood_num}
+	order by total_score desc
+	</select>
+
+	<select id="res_List_exc_gu" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants 
+	where r_foodtype=#{r_foodtype} and mood_num=#{mood_num}
+	order by total_score desc
+	</select>		
+	
+	<select id="res_List_exc_mood" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants 
+	where r_addr_gu=#{r_addr_gu} and  r_foodtype=#{r_foodtype}
+	order by total_score desc
+	</select>		
+
+	<select id="res_List_exc_foodtype" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants 
+	where r_addr_gu=#{r_addr_gu} and  r_foodtype=#{r_foodtype} and mood_num=#{mood_num}
+	order by total_score desc
+	</select>	
+	
+	<select id="isLogin" resultType="kr.smhrd.model.MembersVO">
+	select * from members where m_id =#{m_id} and m_pwd = #{m_pwd}
+	</select>
+	
+	<insert id="memberInsert" parameterType="kr.smhrd.model.MembersVO">
+	insert into members(m_id, m_pwd, m_email, m_birthdate, m_status, admin_yn)
+	values(#{m_id}, #{m_pwd}, #{m_email}, #{m_birthdate}, 1, 'y')
+	</insert>
+
+	<select id="Search" parameterType = "String" resultType="kr.smhrd.model.RestaurantsVO">
+	select * from restaurants where r_name like CONCAT('%',#{Search},'%') order by total_score desc
+	</select>
+
+	<insert id="reviewsInsert" parameterType="kr.smhrd.model.ReviewsVO" >
+	insert into reviews(r_num, r_name, review_content, review_pic1, m_id, r_rating)
+	values(#{r_num},#{r_name}, #{review_content}, #{review_pic1}, #{m_id}, #{r_rating})
+	</insert>
+	
+	<!-- detail 리뷰 리스트 -->
+	<select id="reviewsList" parameterType="String" resultType="kr.smhrd.model.ReviewsVO">
+	select * from reviews where r_num=#{r_num} order by review_num desc
+	</select>
+	
+<!-- mypage 리뷰 리스트 -->
+	<select id="myreviewsList" parameterType="String" resultType="kr.smhrd.model.ReviewsVO">
+	select * from reviews where m_id=#{m_id} order by review_num desc
+	</select>
+	
+	<!-- mychoice 리뷰 리스트 -->
+	<select id="mychoicelist" parameterType="String" resultType="kr.smhrd.model.MychoiceVO" >
+	select * from mychoice where m_id = #{m_id} order by c_num desc
+	</select>
+	
+	<insert id="mychoiceInsert" parameterType="kr.smhrd.model.MychoiceVO" >
+	insert into mychoice(r_num, r_name, m_id)
+	values(#{r_num},#{r_name}, #{m_id})
+	</insert>
+	
+	<select id="mychoiceSearch" parameterType="String" resultType="kr.smhrd.model.MychoiceVO" >
+	select * from mychoice where r_num = #{r_num} and m_id = #{m_id}
+	</select>
+</mapper>

@@ -1,0 +1,97 @@
+#slider {
+    width: 100%;
+    height: auto;
+    font-size: 30pt;
+    font-style: italic;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.slider_list{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.slider_list_img{
+    width: 300px;
+    height: 250px;
+    padding: 5px;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.lim{
+    padding: 5px;
+    margin: 5px;
+    max-width: 100%;
+    width: auto !important;
+    height: auto;
+}
+/* category 끝 */
+
+/* slider 시작 */
+.slider_box{
+    text-align: center;
+}
+.bx-wrapper {
+    position: relative;
+}
+.bx-controls-direction{
+    font-size: 20px;
+}
+
+.bx-controls-direction a {
+    position: absolute; 
+    top: 55%; 
+    display: block; 
+    width: 80px; 
+    height: 80px; 
+    overflow: hidden;
+    transform: translateY(-50%); 
+    font-weight: normal;
+}
+                    
+.bx-controls-direction .bx-prev {
+    left: 0;
+}
+                    
+.bx-controls-direction .bx-next {
+    right: 0;
+}
+                    
+.bx-controls-direction .bx-prev:before{
+    content: "\e93d"; 
+    font-family: 'xeicon';
+}
+                    
+.bx-controls-direction .bx-next:before{
+    content: "\e940"; 
+    font-family: 'xeicon';
+}
+                    
+.bx-pager{
+    position: absolute;
+    left: 0;
+    bottom: 92px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5px;
+}
+
+.bx-pager a {
+    display: block;
+    font-size: 0;
+    color: transparent;
+    width: 24px; height: 3px;
+    background-color: white;
+}
+                    
+.bx-pager div a.active{
+    background-color: white;
+}
+/* slider 끝 */

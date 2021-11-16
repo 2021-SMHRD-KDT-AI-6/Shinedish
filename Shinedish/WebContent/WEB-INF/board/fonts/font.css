@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Cafe24S';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tway_sky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#header{
+    font-family: 'Tway_sky';
+}
+
+.search_box{
+    font-family: 'Tway_sky';
+}
+
+.category_list_01{
+    font-family: 'Tway_sky';
+}
+
+.sub{
+    font-family: 'Cafe24S';
+}
+
+.enjoy_inf{
+    font-family: 'Cafe24S';
+}
+
+.enjoy_rst_button_name{
+    font-family: 'Cafe24S';
+}
+
+.enjoy_map_button_name{
+    font-family: 'Cafe24S';
+}
+
+.enjoy_review_button_name{
+    font-family: 'Cafe24S';
+}
+
+.enjoy_review_box{
+    font-family: 'Cafe24S';
+}
+
+.review_inf_write{
+    font-family: 'Cafe24S';
+}
+
+.rst_inf{
+    font-family: 'Cafe24S';
+}
+
+.rst_button_name{
+    font-family: 'Cafe24S';
+}
+
+.map_button_name{
+    font-family: 'Cafe24S';
+}
+
+.review_write{
+    font-family: 'Cafe24S';
+}
+
+.review_button_name{
+    font-family: 'Cafe24S';
+}
+
+#line{
+    font-family: 'Tway_sky';
+}
+
+#footer{
+    font-family: 'Cafe24S';
+}
+
+body{
+    font-family: 'Cafe24S';
+}
+
+h1 {
+    font-family: "Cafe24S";
+}
+
+/* login_page */
+.m_login_box{
+    font-family: "Cafe24S";
+}

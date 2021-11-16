@@ -1,0 +1,138 @@
+#home {
+    width: 1200px;
+    height: 3000px;
+    margin: 0 auto;
+}
+
+#mainbar {
+    width: 100%;
+    height: 100px;
+}
+
+#mainpic {
+    background-image: url(https://src.hidoc.co.kr/image/lib/2020/11/9/1604911318873_0.jpg);
+    overflow: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+}
+
+#mainpage {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+#subbar {
+    background-color: gray;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+}
+
+#m_logo {
+    display: inline-block;
+}
+
+#upbar {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.frame{
+    width: 200px;
+    height: 110px;
+    left: 0%;
+}
+
+#recommend_food {
+    font-size: 30pt;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+#stsc {
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    margin: 0%;
+}
+
+/*.col-6 {
+    display: inline-block;
+    width: 32%;
+    height: 465px;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    margin: 5px;
+}*/
+#header{
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 2fr;
+    height: 80px;
+}
+.search_box{
+    text-align: center;
+    background: rgb(204, 224, 213);
+    transform: translate(0, 30%);
+    height: 45px;
+    width: auto;
+    border-radius: 40px;
+    padding: 5px;
+}
+.menu{
+    text-align: right;
+    padding-top: 20px;
+}
+.menu_list{
+    font-size: 20px;
+    padding-right: 30px;
+}
+.search-btn{
+    color: white;
+    width: 35px;
+    height: 35px;
+    float: right;
+    border-radius: 50%;
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 170px;
+}
+
+.search_box:hover > .search-btn{
+    width: 38px;
+    padding: 0 6px;
+}
+
+#line{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.line_list{
+    padding: 5px;
+    margin: 5px;
+}
+
+#header_line{
+    padding: 1px;
+    margin: 1px;
+}

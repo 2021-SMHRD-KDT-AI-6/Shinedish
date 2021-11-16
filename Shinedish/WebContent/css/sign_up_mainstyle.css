@@ -1,0 +1,179 @@
+#shinedish {
+    width: 1200px;
+    height: 1000px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/* header 시작 */
+#header{
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#header{
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 2fr;
+}
+
+.search_box{
+    text-align: center;
+    background: rgb(204, 224, 213);
+    transform: translate(0, 30%);
+    height: 45px;
+    width: auto;
+    border-radius: 40px;
+    padding: 5px;
+}
+
+.search-btn{
+    color: white;
+    width: 35px;
+    height: 35px;
+    float: right;
+    border-radius: 50%;
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 170px;
+}
+
+.search_box:hover > .search-btn{
+    width: 38px;
+    padding: 0 6px;
+}
+
+.menu{
+    text-align: right;
+    padding-top: 20px;
+}
+
+.menu_list{
+    font-size: 20px;
+    padding-right: 30px;
+}
+/* header 끝 */
+
+/* sign_up_page 시작 */
+#sign_up_mainpage{
+    width: 100%;
+    height: 750px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.m_sign_up_box{
+    width: 50%;
+    height: 370px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+    background-color: rgb(212, 211, 211);
+}
+
+#login_text {
+    width: 60%;
+    height: 10%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 28px;
+    text-align: center;
+    display: inline-block;
+}
+
+#login_id{
+    width: 60%;
+    height: 10%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+#login_pw{
+    width: 60%;
+    height: 10%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+#login_pw_check{
+    width: 70%;
+    height: 10%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+#login_email{
+    width: 60%;
+    height: 10%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+#login_birth{
+    width: 60%;
+    height: 10%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}
+/* sign_up_page 끝 */
+
+#line{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.line_list{
+    padding: 5px;
+    margin: 5px;
+}
+
+#header_line{
+    padding: 1px;
+    margin: 1px;
+}
+
+/* footer 시작 */
+#footer {
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    background-color: gray;
+    width: 100%;
+    height: 100px;
+    border: 1px solid
+}
+/* footer 끝 */

@@ -1,0 +1,106 @@
+
+/* rst button 시작 */
+#enjoy_button{
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.enjoy_button_name {
+    font-size: 17px;
+    background-color: rgb(204, 224, 213);
+    color: black;
+    border: 3px rgb(110, 73, 36) black;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    transition: all 0.4s;
+    text-align: center;
+}
+
+#enjoy_button_name_pick:focus{
+    outline: none;
+}
+
+#enjoy_button_name_pick:hover{
+    background-color: black;
+    color: white;
+}
+/* rst button 끝 */
+
+/* map button 시작 */
+#enjoy_map_button{
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.enjoy_map_button_name{
+    font-size: 17px;
+    background-color: rgb(204, 224, 213);
+    color: black;
+    border: 3px rgb(110, 73, 36) black;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    transition: all 0.4s;
+    text-align: center;
+}
+
+#enjoy_map_button_name_pick:focus{
+    outline: none;
+}
+
+#enjoy_map_button_name_pick:hover{
+    background-color: black;
+    color: white;
+}
+/* map button 끝 */
+
+/* review button 시작 */
+.enjoy_review_button_box{
+    padding: 2px;
+    margin: 2px;
+    text-align: center;
+}
+
+.enjoy_review_button_list{
+    padding: 2px;
+    margin: 2px;
+}
+
+#enjoy_review_button{
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.enjoy_review_button_name{
+    font-size: 17px;
+    background-color: rgb(204, 224, 213);
+    color: black;
+    border: 3px rgb(110, 73, 36) black;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    transition: all 0.4s;
+}
+
+#enjoy_review_button_name_pick:focus{
+    outline: none;
+}
+
+#enjoy_review_button_name_pick:hover{
+    background-color: black;
+    color: white;
+}
+
+.enjoy_review_box:nth-child(n+6) {
+    display:none; 
+}
+/* review button 끝 */

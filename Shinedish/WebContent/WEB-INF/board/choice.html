@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShineDish</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="css/Cafe24SsurroundAir.css">
+    <link rel="stylesheet" href="css/HS새마을체.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <style>
+        #home {
+            width: 1200px;
+            height: 2700px;
+            margin: 0 auto;
+        }
+
+        #mainbar {
+            background-color: whitesmoke;
+            width: 100%;
+            height: 60px;
+        }
+
+        #maintag {
+            overflow: auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 300px;
+        }
+
+        #subbar {
+            text-align: center;
+            background-color: gray;
+            width: 100%;
+            height: 100px;
+        }
+
+        #m_logo {
+            display: inline-block;
+        }
+
+        #upbar {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        #category {
+            width: 100%;
+            height: 200px;
+            overflow: auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            padding: 5px;
+            margin: 5px;
+            border: 2px solid
+        }
+
+        .category_list {
+            width: 100%;
+            height: 30px;
+        }
+
+        .category_list_01 {
+            float: left;
+            width: 30%;
+            height: 160px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .lim {
+            display: block;
+        }
+
+        #maintag {
+            background-color: whitesmoke;
+            width: 100%;
+            padding: 10px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="home">
+        <div id="header">
+
+            <div class="logo">
+                <a href="http://localhost:8081/Shinedish/main.do" id="header_logo"><img src="img/shinedish.png" alt="로고"></a>
+            </div>
+
+            <div class="search_box">
+                <input class="search-txt" type="text" name="" placeholder="Type to search">
+                <a class="search-btn" href=""><i class="fas fa-search"></i></a>
+            </div>
+
+            <div class="menu">
+                <a href="http://localhost:8081/Shinedish/main.do" class="menu_list" >메인</a>
+                <a href="http://localhost:8081/Shinedish/choice.do" class="menu_list">맛집추천</a>
+                <a href="http://localhost:8081/Shinedish/gologin.do" class="menu_list">MY페이지</a>
+                <% if(members == null) { %>
+                <a href="http://localhost:8081/Shinedish/gologin.do" class="menu_list">로그인</a>
+                <% }else { %>
+                <a href='<%=cpath%>/logout.do' class="menu_list" onclick="outFn()">로그아웃</a>
+                <% } %>
+            </div>
+
+        </div>
+
+        <div id="maintag">
+            <div id="category">
+
+                <div class="category_list">
+
+                    <div class="category1">
+                        <li class="category_list_01">
+                            지역
+                            <ul class="sub" style="display:none">
+                                <li><a href="#">동구</a></li>
+                                <li><a href="#">서구</a></li>
+                                <li><a href="#">남구</a></li>
+                                <li><a href="#">북구</a></li>
+                                <li><a href="#">광산구</a></li>
+                            </ul>
+                        </li>
+                    </div>
+
+                    <div class="category1">
+                        <li class="category_list_01">
+                            지역
+                            <ul class="sub" style="display:none">
+                                <li><a href="#">동구</a></li>
+                                <li><a href="#">서구</a></li>
+                                <li><a href="#">남구</a></li>
+                                <li><a href="#">북구</a></li>
+                                <li><a href="#">광산구</a></li>
+                            </ul>
+                        </li>
+                    </div>
+
+                    <div class="category1">
+                        <li class="category_list_01">
+                            분위기
+                            <ul class="sub" style="display:none">
+                                <li><a href="#">맛좋은</a></li>
+                                <li><a href="#">인기좋은</a></li>
+                                <li><a href="#">경치좋은</a></li>
+                                <li><a href="#">분위기 좋은</a></li>
+                                <li><a href="#">가성비 좋은</a></li>
+                            </ul>
+                        </li>
+                    </div>
+
+                    <script>
+                        $(".category1").click(function () {
+                            if ($(this).find(".sub").is(":visible")) {
+                                $(this).find(".sub").css("display", "none");
+                            }
+                            else {
+                                $(this).find(".sub").css("display", "block");
+                            }
+                        })
+                    </script>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="mainpage">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        My Card
+                        <p id="stsc">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
+                            sem ut malesuada.</p>
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        My Card
+                        <p id="stsc">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
+                            sem ut malesuada.</p>
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        My Card
+                        <p id="stsc">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
+                            sem ut malesuada.</p>
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        My Card
+                        <p id="stsc">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
+                            sem ut malesuada.</p>
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        My Card
+                        <p id="stsc">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
+                            sem ut malesuada.</p>
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        My Card
+                        <p id="stsc">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
+                            sem ut malesuada.</p>
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        My Card
+                        <p id="stsc">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
+                            sem ut malesuada.</p>
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        My Card
+                        <p id="stsc">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
+                            sem ut malesuada.</p>
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        My Card
+                        <p id="stsc">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed
+                            sem ut malesuada.</p>
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="subbar">
+            <span>
+                <br>
+                <p>헿헿헿헿</p>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

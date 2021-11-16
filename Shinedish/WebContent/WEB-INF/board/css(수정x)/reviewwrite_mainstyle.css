@@ -1,0 +1,182 @@
+#shinedish {
+    width: 1200px;
+    height: 2700px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/* header �떆�옉 */
+#header{
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#header{
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 2fr;
+}
+.search_box{
+    text-align: center;
+    background: rgb(204, 224, 213);
+    transform: translate(0, 30%);
+    height: 45px;
+    width: auto;
+    border-radius: 40px;
+    padding: 5px;
+}
+.menu{
+    text-align: right;
+    padding-top: 20px;
+}
+.menu_list{
+    font-size: 20px;
+    padding-right: 30px;
+}
+.search-btn{
+    color: white;
+    width: 35px;
+    height: 35px;
+    float: right;
+    border-radius: 50%;
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 170px;
+}
+
+.search_box:hover > .search-btn{
+    width: 38px;
+    padding: 0 6px;
+}
+/* header �걹 */
+
+/* map �떆�옉 */
+#review{
+    width: 100%;
+    height: 880px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.review_box {
+    width: 80%;
+    height: 870px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+.review_inf_img {
+    width: 85%;
+    height: 40%;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+}
+
+.review_photo_img{
+    max-width: 100%;
+    width: auto !important;
+    height: auto;
+}
+
+.review_inf_write {
+    width: 85%;
+    height: 50%;
+    padding: 3px;
+    margin: 3px;
+    background-color: beige;
+    border: solid 1px black;
+    display: inline-block;
+}
+
+.review_inf_star {
+    width: 85%;
+    height: 8%;
+    padding: 3px;
+    margin: 3px;
+    background-color: beige;
+    border: solid 1px black;
+    display: inline-block;
+}
+/* map �걹 */
+
+#line{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.line_list{
+    padding: 5px;
+    margin: 5px;
+}
+
+#header_line{
+    padding: 1px;
+    margin: 1px;
+}
+
+/* footer �떆�옉 */
+#footer {
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    background-color: gray;
+    width: 100%;
+    height: 100px;
+    border: 1px solid
+}
+/* footer �걹 */
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    width: 5em;
+  }
+   
+  .star-rating input {
+    display: none;
+  }
+   
+  .star-rating label {
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2.3px;
+    -webkit-text-stroke-color: #2b2a29;
+    cursor: pointer;
+  }
+   
+  .star-rating :checked ~ label {
+    -webkit-text-fill-color: gold;
+  }
+   
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    -webkit-text-fill-color: #fff58c; 
+  }
+  
